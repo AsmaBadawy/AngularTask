@@ -1,0 +1,41 @@
+<mat-card>
+    <mat-card-title>Registration Page</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="Registrationform">
+        <mat-form-field>
+            <mat-label>FirstName</mat-label>
+          <input type="text" matInput placeholder="FirstName" formControlName="FirstName" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>LastName</mat-label>
+            <input type="text" matInput placeholder="LastName" formControlName="LastName" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>UserName</mat-label>
+
+            <input type="text" matInput placeholder="UserName" formControlName="UserName" required>
+          </mat-form-field>
+          
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+
+          <input type="password" matInput placeholder="Password" formControlName="Password" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>date</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName="date" >
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 color="primary"></mat-datepicker>
+          </mat-form-field>
+        <div class="button">
+          <button type="submit" mat-button (click)="Registration()" [disabled]="!Registrationform.valid">Sign Up</button>
+        </div>
+        <div class="button">
+          
+          <button class="buttonregistercolor" type="submit" mat-button [routerLink]="['/login']" >login in </button>
+        </div>
+       
+  
+      </form>
+    </mat-card-content>
+  </mat-card>

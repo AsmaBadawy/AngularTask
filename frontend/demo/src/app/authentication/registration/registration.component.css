@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    justify-content: center;
+  }
+  mat-card{
+    margin: 40px;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  mat-card-title{
+    color: rgb(131, 131, 180);
+
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+  button{
+    background-color: rgb(131, 131, 180);
+    color: white;
+     width: 30%;
+  }
+  .buttonregistercolor{
+    background-color:white; 
+    color: rgb(131, 131, 180);
+     width: 30%;
+  }

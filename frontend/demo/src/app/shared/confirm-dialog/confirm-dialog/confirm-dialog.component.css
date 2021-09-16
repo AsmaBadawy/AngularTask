@@ -1,0 +1,21 @@
+.confirm{
+    background-color: rgb(109, 109, 156);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+.cancel{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+.contain{
+    float:right;
+    margin:20px;
+}
+input{
+    margin:0px 10px;
+}

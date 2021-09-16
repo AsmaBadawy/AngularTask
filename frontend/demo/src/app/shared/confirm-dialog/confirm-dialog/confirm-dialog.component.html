@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  {{data.message}}
+</div>
+<div class="contain">
+  <input class="confirm" type="button" value="Confirm" [mat-dialog-close]="true">
+  <input type="button" class="cancel" value="Cancel"  [mat-dialog-close]="false">
+  
+</div>
