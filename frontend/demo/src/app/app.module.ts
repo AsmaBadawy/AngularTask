@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,6 +28,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSnackBarComponent } from './shared/MatSnackBar/mat-snack-bar/mat-snack-bar.component';
+import { TokeninterceptorService } from './authentication/tokeninterceptor.service';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,14 @@ import { MatSortModule } from '@angular/material/sort';
 
    MatSortModule
   ],
-  providers: [],
+  providers: [
+    MatSnackBarComponent,
+      {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokeninterceptorService,
+      multi:true
+      }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
